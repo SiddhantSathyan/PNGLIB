@@ -1,5 +1,15 @@
-import { Chunk, ChunkFactory } from "./Chunks.factory";
+import { ChunkFactory } from "./Chunks.factory";
+import { Chunk } from "./Chunks/Chunk";
+import { IDAT } from "./Chunks/IDAT";
+import { IHDR } from "./Chunks/IHDR";
 import { ColorDepthType } from "./UtilityClasses/constants";
+
+export interface ImageRecord{ 
+    width: number;
+    height: number;
+    imageType: ColorDepthType;
+    image: Buffer | Buffer[];
+}
 
 export class PNG {
     private chunks: Chunk[];

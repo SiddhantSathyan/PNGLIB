@@ -1,0 +1,3 @@
+interface IDataStrategy {
+    getData(): Buffer;
+}
